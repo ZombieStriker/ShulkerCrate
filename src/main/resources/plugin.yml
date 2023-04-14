@@ -2,3 +2,11 @@ name: ShulkerCrate
 version: '${project.version}'
 main: me.zombie_striker.shulkercrate.ShulkerCrate
 api-version: 1.19
+commands:
+  shulkercrate:
+    description: "ShulkerCrate commands"
+    aliases:
+      - "sc"
+      - "crate"
+  keys:
+    description: "View Keys"
