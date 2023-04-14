@@ -1,0 +1,4 @@
+name: ShulkerCrate
+version: '${project.version}'
+main: me.zombie_striker.shulkercrate.ShulkerCrate
+api-version: 1.19
