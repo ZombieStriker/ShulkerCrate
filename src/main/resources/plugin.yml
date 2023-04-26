@@ -10,3 +10,10 @@ commands:
       - "crate"
   keys:
     description: "View Keys"
+permissions:
+  shulkercrates.commands.placecrate:
+    description: "Allows players to use the /sc placecrate command"
+  shulkercrates.destroycrates:
+    description: "Allows players to destroy crates"
+  shulkercrates.commands.addprize:
+    description: "Adds prizes using commands."

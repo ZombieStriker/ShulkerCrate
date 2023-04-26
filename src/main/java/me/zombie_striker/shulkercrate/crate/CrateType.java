@@ -4,12 +4,13 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class CrateType {
     private String crateName;
     private String displayname;
     private Material crateBlockType;
-    private HashMap<Reward,Double> rewards = new HashMap<>();
+    private LinkedList<Reward> rewards = new LinkedList<>();
 
     public CrateType(String name,String displayname, Material crateBlockType){
         this.crateName = name;
@@ -21,7 +22,7 @@ public class CrateType {
         return displayname;
     }
 
-    public HashMap<Reward, Double> getRewards() {
+    public LinkedList<Reward> getRewards() {
         return rewards;
     }
 
