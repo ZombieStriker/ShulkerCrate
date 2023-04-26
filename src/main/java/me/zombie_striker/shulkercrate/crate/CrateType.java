@@ -7,12 +7,18 @@ import java.util.HashMap;
 
 public class CrateType {
     private String crateName;
+    private String displayname;
     private Material crateBlockType;
     private HashMap<Reward,Double> rewards = new HashMap<>();
 
-    public CrateType(String name, Material crateBlockType){
+    public CrateType(String name,String displayname, Material crateBlockType){
         this.crateName = name;
         this.crateBlockType = crateBlockType;
+        this.displayname = displayname;
+    }
+
+    public String getDisplayname() {
+        return displayname;
     }
 
     public HashMap<Reward, Double> getRewards() {

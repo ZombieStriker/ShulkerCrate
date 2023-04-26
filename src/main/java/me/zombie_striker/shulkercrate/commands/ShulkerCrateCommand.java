@@ -1,6 +1,8 @@
 package me.zombie_striker.shulkercrate.commands;
 
 import me.zombie_striker.shulkercrate.ShulkerCrate;
+import me.zombie_striker.shulkercrate.crate.Crate;
+import me.zombie_striker.shulkercrate.crate.CrateType;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -32,7 +34,18 @@ public class ShulkerCrateCommand implements CommandExecutor, TabExecutor {
             return true;
         }
         if(args[0].equalsIgnoreCase("placecrate")){
-
+            if(args.length == 1){
+                sender.sendMessage(ChatColor.RED+" You need to provide a crate type");
+                return true;
+            }
+            CrateType type = shulkerCrate.getTypeByName(args[1]);
+            if(type==null){
+                sender.sendMessage(ChatColor.RED+"Could not find crate "+args[1]+".");
+                return true;
+            }
+            player.getLocation().getBlock().setType(type.getCrateBlockType());
+            Crate crate = new Crate(player.getLocation(),type);
+            
         }
         return true;
     }
