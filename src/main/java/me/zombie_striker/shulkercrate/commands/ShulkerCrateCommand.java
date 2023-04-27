@@ -36,7 +36,7 @@ public class ShulkerCrateCommand implements CommandExecutor, TabExecutor {
             sender.sendMessage("/sc placecrate <type> : Places a crate at your location.");
             return true;
         }
-        if(args[0].equalsIgnoreCase("addPrize")) {
+        if(args[0].equalsIgnoreCase("addItemPrize")) {
             if (!sender.hasPermission("shulkercrates.commands.addprize")) {
                 sender.sendMessage("You do not have permission to use this command.");
                 return true;
